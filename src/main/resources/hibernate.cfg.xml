@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/college</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Sddmpnmk@1</property>
+<!--        SQL dialecrt-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<!--        Enable Hibernate's automatic session context managment-->
+        <property name="currnt_session_context_class">thread</property>
+<!--        Echo all executted SQL to cahe-->
+        <property name="show_sql">true</property>
+<!--        Drop and re-create the database schema on startup-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+        <mapping class="com.School.model.Student"></mapping>
+    </session-factory>
+</hibernate-configuration>
